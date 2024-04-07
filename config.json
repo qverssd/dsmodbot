@@ -1,0 +1,5 @@
+{
+    "TOKEN": "YOUR_TOKEN",
+    "PREFIX": "!",
+    "MUTED_ROLE_ID": "MUTED_ROLE_ID"
+}
