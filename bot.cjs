@@ -14,7 +14,7 @@ client.once('ready', () => {
 client.on('messageCreate', async message => {
     if (!message.guild || message.author.bot) return;
 
-    const wordsToFilter = ['выблядок', 'viblyadok', 'wiblyadok'];
+    const wordsToFilter = [/*here should be an array with forbidden words*/];
 
     const containsFilteredWord = wordsToFilter.some(word => message.content.toLowerCase().includes(word.toLowerCase()));
 
@@ -37,12 +37,7 @@ client.on('messageCreate', async message => {
     
     if (!message.content.startsWith(PREFIX) || message.author.bot) return;
     const args = message.content.slice(PREFIX.length).trim().split(/ +/);
-    const command = args.shift().toLowerCase();
-
-    
-    if (command === 'ping') {
-        message.channel.send('Pong!');
-    }
+    const command = args.shift().toLowerCase(); 
 });
 
 client.login(TOKEN);
